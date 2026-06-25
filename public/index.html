@@ -1,0 +1,7 @@
+<!doctype html><html><body>
+<h1>Minecraft AFK Bot</h1><div id=data>Loading...</div>
+<script>
+async function f(){let d=await (await fetch('/api/status')).json();
+data.innerHTML=`Status: ${d.status}<br>Username: ${d.username}<br>Server: ${d.server}<br>Uptime: ${d.uptimeSeconds}s<br>Last Disconnect: ${d.lastDisconnect}`}
+setInterval(f,2000);f();
+</script></body></html>
